@@ -1,15 +1,12 @@
 "use strict";
 
-// const userNames = ["Петрик Ольга Іванівна", "Гнатюк Петро Антонович", "Рудко Андрій Опанасович"];
-// let initials;
+const userNames = ["Петрик Ольга Іванівна", "Гнатюк Петро Антонович", "Рудко Андрій Опанасович"];
+let initials = userNames.map(split("").substring(0, 1).push("."));
 
-// // тут ваш код ...
-// for (let i = 0; i > userNames.length; i += 1);
-// console.table(userNames);
-// userNames.splice(1, 4);
-// console.log(userNames);
+// тут ваш код ...
 
-// console.log(initials); // [ "Г.П.А.", "П.О.І.", "Р.А.О."]
+
+console.log(initials); // [ "Г.П.А.", "П.О.І.", "Р.А.О."]
 
 
 // 2 задача
@@ -34,11 +31,11 @@
 // 3 задача
 
 
-const resultsArray = [1, 2, [3, [4]]];
-let productOfArray = resultsArray([ ...3, ...4]);
+// const resultsArray = [1, 2, [3, [4]]];
+// let productOfArray = resultsArray([ ...3, ...4]);
 
 
 
-// тут ваш код...
+// // тут ваш код...
 
-console.log(productOfArray); // 24
+// console.log(productOfArray); // 24
