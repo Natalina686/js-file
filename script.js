@@ -7,45 +7,35 @@ const userNames = [
 ];
 
 let initials = userNames.map((name) => {
-  // далі можно за допомогою split це розділити
-  const words = name.split(" "); // отримаємо масив слів
-  // ...
-  console.log(words);
+  const words = name.split(" ");
+
+  // console.log(words);
 
   const wordsFirstLetters = words.map((word) => word[0]);
-  console.log(wordsFirstLetters);
+
+  // console.log(wordsFirstLetters);
   const letters = wordsFirstLetters.join(".");
-  console.log(letters);
-  console.log(typeof letters);
-  let lettersArray = letters.split("-");
-  console.log(lettersArray);
+  return letters;
 });
 
-// console.log(initials); // [ "Г.П.А.", "П.О.І.", "Р.А.О."]
-
-// console.log(lettersArray);
+console.log(initials.sort()); // [ "Г.П.А.", "П.О.І.", "Р.А.О."]
 
 // 2 задача
 
-// const currentMaxValue = 4589;
-// let arr = ("" + currentMaxValue).split("");
-// console.log(arr.map(Number));
+const currentMaxValue = 4589;
 
-// let reverseMaxValue = arr.slice().reverse().join("");
-//
+let reverseMaxValue = +currentMaxValue.toString().split("").reverse().join("");
 
-// // console.log(+reverseMaxValue.toString());
-// reverseMaxValue = +reverseMaxValue.toString();
-// // // тут ваш код...
-
-// console.log(reverseMaxValue); // 9854
-// console.log(typeof reverseMaxValue); // 'number'
+console.log(reverseMaxValue); // 9854
+console.log(typeof reverseMaxValue); // 'number'
 
 // 3 задача
 
-// const resultsArray = [1, 2, [3, [4]]];
-// let productOfArray = resultsArray.flatMap(num => num);
-// let result = productOfArray.reduce((acc, rec) => acc * rec);
+const resultsArray = [1, 2, [3, [4]]];
+let productOfArray = resultsArray.flat(2);
+// console.log(productOfArray);
+// let productOfArray = resultsArray.flatMap((num) => num);
+let result = productOfArray.reduce((acc, rec) => acc * rec);
 
-// console.log(productOfArray); // 24
-// console.log(result);
+console.log(productOfArray); // 24
+console.log(result);
