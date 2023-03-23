@@ -22,20 +22,32 @@ console.log(initials.sort()); // [ "Г.П.А.", "П.О.І.", "Р.А.О."]
 
 // 2 задача
 
-const currentMaxValue = 4589;
+// const currentMaxValue = 4589;
 
-let reverseMaxValue = +currentMaxValue.toString().split("").reverse().join("");
+// let reverseMaxValue = +currentMaxValue.toString().split("").reverse().join("");
 
-console.log(reverseMaxValue); // 9854
-console.log(typeof reverseMaxValue); // 'number'
+// console.log(reverseMaxValue); // 9854
+// console.log(typeof reverseMaxValue); // 'number'
 
 // 3 задача
 
-const resultsArray = [1, 2, [3, [4]]];
-let productOfArray = resultsArray.flat(2);
+// const resultsArray = [1, 2, [3, [4]]];
+// let productOfArray = resultsArray.flat(2);
 // console.log(productOfArray);
 // let productOfArray = resultsArray.flatMap((num) => num);
-let result = productOfArray.reduce((acc, rec) => acc * rec);
+// let result = productOfArray.reduce((acc, rec) => acc * rec);
 
-console.log(productOfArray); // 24
-console.log(result);
+// console.log(productOfArray); // 24
+// console.log(result);
+
+// продвинута робота з функціями
+
+// перша задача
+
+// let firstDate = Date.now(2005, 05, 25, 20, 03, 33);
+// // doSomethingForALongTime();
+// let secondDate = Date.now(2025, 08, 30, 20, 58, 22);
+
+// let totalTime = secondDate - firstDate;
+
+// console.log(totalTime);
