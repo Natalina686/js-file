@@ -7,9 +7,10 @@ let initials = userNames.map(name => {
   // ...
 for (const word of words)
    console.log(word[0]);
-
+  //  let letters = words[0].join(".");
 
 }
+
 );
 
 
@@ -20,7 +21,11 @@ for (const word of words)
 console.log(initials); // [ "Г.П.А.", "П.О.І.", "Р.А.О."]
 
 
-
+const text = "How are you";
+const array = text.split(" ");
+const array2 = text.split("");
+console.log(array);
+console.log(array2);
 
 
 
