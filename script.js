@@ -91,26 +91,33 @@ getDifferences("2026-03-17", "2023-03-13", "days");
 
 // second task
 
-// const priceData = {
-//   Apples: "23.4",
-//   BANANAS: "48",
-//   oRAngGEs: "48.7584",
-// };
-// // Чому не працює? Якщо без toFixed працює, як це правильно написати?
+const priceData = {
+  Apples: "23.4",
+  BANANAS: "48",
+  oRAngGEs: "48.7584",
+};
 
-// const result = Object.entries(priceData).map(([key, value]) => [
-//   (key = key.toLowerCase()),
-  
-//  (value = +value.toString().toFixed(2)),
- 
-// ]);
-// console.log(result);
+function optimizer(data) {
+  const dataArr = Object.entries(data).map((object) => {
+    // перетворюємо ключ та значення до потрібного формату
+    const key = object[0].toLowerCase();
+    const value = Number(object[1]).toFixed(2);
 
-// const resultObject = Object.fromEntries(result);
+    // Повертаємо масив у якому перший елемент це буде ключ
+    // другий елемент - значення
+    return [key, value];
+  });
 
-// console.log(resultObject);
+  // повертаєму результат з використанням методу fromEntries
+  return Object.fromEntries(dataArr);
+}
 
-// console.log(updatedPriceData); // {apples: '23.40', bananas: '48.00', oranges: '48.76'}
+
+  let updatedPriceData = optimizer(priceData);
+  console.log(updatedPriceData)    // {apples: '23.40', bananas: '48.00', oranges: '48.76'}
+
+
+
 
 
 
@@ -119,30 +126,29 @@ getDifferences("2026-03-17", "2023-03-13", "days");
 // - функцію яка рекурсивно буде знаходити суму всіх непарних додатніх чисел до якогось числа.
 // Приклад:
 // function recursiveOddSumTo(number) { 
-// // let total = 0;
-// // if (number % 2 !== 0) return total += number;
-  
+//   if (number === 1){
+//   return 1;
+// }
+//  if (number % 2 === 0) {
+//   return recursiveOddSumTo(number-1);
+//  }
+//  if (number % 2 !== 0) {
+//   return number + recursiveOddSumTo(number-2);
+// }
+
 // }
 // console.log(recursiveOddSumTo(1)) // 1
 // console.log(recursiveOddSumTo(10)) // 25
 
-
-
-// - функцію яка ітеративно (в циклі) буде знаходити суму всіх непарних додатніх чисел до якогось числа.
-// Приклад:
-
-// тут ваш код};
-
-
-
 function iterativeOddSumTo(number) {
-let result = 0;
-for (let i = 0; i < number; i++) {
-  result += number;
-}
-  return result;
-  
-  };
+  let total = 1;
 
-// сonsole.log(iterativeOddSumTo(1)) // 1
-console.log(iterativeOddSumTo(10)) // 25
+  for (let i = number; i <= number; i -= 1) {
+    total *= number;
+  }
+
+  return total;
+}
+
+ console.log(iterativeOddSumTo(1)) // 1
+ console.log(iterativeOddSumTo(10)) // 25
