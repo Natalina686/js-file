@@ -144,7 +144,12 @@ function iterativeOddSumTo(number) {
   let total = 1;
 
   for (let i = number; i <= number; i -= 1) {
-    total *= number;
+   if (number % 2 === 0) {
+  return number-1;
+}
+if (number % 2 !== 0) {
+  total += number;
+ }
   }
 
   return total;
