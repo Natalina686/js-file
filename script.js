@@ -53,68 +53,68 @@
 
 // перша задача
 
-function getDifferences(
-  start = new Date(),
-  end = new Date(),
-  period = "hours"
-) {
-  const DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
-  const HOUR_IN_MILLISECONDS = 60 * 60 * 1000;
-  const MIN_IN_MILLISECONDS = 60 * 1000;
-  const SEC_IN_MILLISECONDS = 1000;
-  const startDate = Date.parse(start);
-  const endDate = Date.parse(end);
-  let resultMillisec = Math.abs(startDate - endDate);
-  let result;
-  switch (period) {
-    case "seconds":
-      result = resultMillisec / SEC_IN_MILLISECONDS;
-      break;
-    case "minuts":
-      result = resultMillisec / MIN_IN_MILLISECONDS;
-      break;
-    case "hours":
-      result = resultMillisec / HOUR_IN_MILLISECONDS;
-      break;
-    case "days":
-      result = resultMillisec / DAY_IN_MILLISECONDS;
-      break;
-  }
-  console.log(`${result} ${period}`);
-  return `${result} ${period}`;
-}
-getDifferences("2002-03-01", "2023-03-13", "seconds");
-getDifferences("2003-03-10", "2023-03-23", "hours");
-getDifferences("2026-03-17", "2023-03-13", "days");
+// function getDifferences(
+//   start = new Date(),
+//   end = new Date(),
+//   period = "hours"
+// ) {
+//   const DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
+//   const HOUR_IN_MILLISECONDS = 60 * 60 * 1000;
+//   const MIN_IN_MILLISECONDS = 60 * 1000;
+//   const SEC_IN_MILLISECONDS = 1000;
+//   const startDate = Date.parse(start);
+//   const endDate = Date.parse(end);
+//   let resultMillisec = Math.abs(startDate - endDate);
+//   let result;
+//   switch (period) {
+//     case "seconds":
+//       result = resultMillisec / SEC_IN_MILLISECONDS;
+//       break;
+//     case "minuts":
+//       result = resultMillisec / MIN_IN_MILLISECONDS;
+//       break;
+//     case "hours":
+//       result = resultMillisec / HOUR_IN_MILLISECONDS;
+//       break;
+//     case "days":
+//       result = resultMillisec / DAY_IN_MILLISECONDS;
+//       break;
+//   }
+//   console.log(`${result} ${period}`);
+//   return `${result} ${period}`;
+// }
+// getDifferences("2002-03-01", "2023-03-13", "seconds");
+// getDifferences("2003-03-10", "2023-03-23", "hours");
+// getDifferences("2026-03-17", "2023-03-13", "days");
 
 
 
-// second task
+// // second task
 
-const priceData = {
-  Apples: "23.4",
-  BANANAS: "48",
-  oRAngGEs: "48.7584",
-};
+// const priceData = {
+//   Apples: "23.4",
+//   BANANAS: "48",
+//   oRAngGEs: "48.7584",
+// };
 
-function optimizer(data) {
-  const dataArr = Object.entries(data).map((object) => {
-    // перетворюємо ключ та значення до потрібного формату
-    const key = object[0].toLowerCase();
-    const value = Number(object[1]).toFixed(2);
+// function optimizer(data) {
+//   const dataArr = Object.entries(data).map((object) => {
+//     // перетворюємо ключ та значення до потрібного формату
+//     const key = object[0].toLowerCase();
+//     const value = Number(object[1]).toFixed(2);
 
-    // Повертаємо масив у якому перший елемент це буде ключ
-    // другий елемент - значення
-    return [key, value];
-  });
+//     // Повертаємо масив у якому перший елемент це буде ключ
+//     // другий елемент - значення
+//     return [key, value];
+//   });
 
-  // повертаєму результат з використанням методу fromEntries
-  return Object.fromEntries(dataArr);
-}
+//   // повертаєму результат з використанням методу fromEntries
+//   return Object.fromEntries(dataArr);
+// }
 
 
-  let updatedPriceData = optimizer(priceData);
-  console.log(updatedPriceData)    // {apples: '23.40', bananas: '48.00', oranges: '48.76'}
+//   let updatedPriceData = optimizer(priceData);
+//   console.log(updatedPriceData)    // {apples: '23.40', bananas: '48.00', oranges: '48.76'}
 
 
 
@@ -141,10 +141,10 @@ function optimizer(data) {
 // console.log(recursiveOddSumTo(10)) // 25
 
 function iterativeOddSumTo(number) {
-  if (number <= 0) return 0
+  if (number <= 0) return 0;
   let sum = 0;
 
-  for (let i = 1; i <= number; i -= 2) {
+  for (let i = 1; i <= number; i += 2) {
   sum += i;
 }
 
