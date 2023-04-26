@@ -141,18 +141,14 @@ function optimizer(data) {
 // console.log(recursiveOddSumTo(10)) // 25
 
 function iterativeOddSumTo(number) {
-  let total = 1;
+  if (number <= 0) return 0
+  let sum = 0;
 
-  for (let i = number; i <= number; i -= 1) {
-   if (number % 2 === 0) {
-  return number-1;
+  for (let i = 1; i <= number; i -= 2) {
+  sum += i;
 }
-if (number % 2 !== 0) {
-  total += number;
- }
-  }
 
-  return total;
+  return sum;
 }
 
  console.log(iterativeOddSumTo(1)) // 1
